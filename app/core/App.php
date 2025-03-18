@@ -12,7 +12,7 @@ class App {
 
         // Controller
 
-        $url = $this->pardeURL();
+        $url = $this->parseURL();
 
         if(file_exists('../app/controllers/' . $url[0] . '.php')) {
             $this->controller = $url[0];
@@ -45,7 +45,7 @@ class App {
     }
 
 
-    public function pardeURL() {
+    public function parseURL() {
 
         if(isset($_GET['url'])) {
             $url = rtrim($_GET['url'], '/');
